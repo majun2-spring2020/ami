@@ -4,7 +4,7 @@
         "aws_secret_key": "akbcLYmwCvxZskCI1Opi8f/yhD0eZhANcZ0ZqX/u",
         "aws_region": "us-east1",
         "subnet_id": "",
-        "source_ami": "",
+        "source_ami": "ami-07ebfd5b3428b6f4d",
         "ssh_username": "ubuntu"
     },
     "builders": [
@@ -43,7 +43,7 @@
                 "use mysql;create user 'majun'@'%' identified by 'qwer1234';flush privileges;GRANT ALL ON *.* TO 'majun'@'%';",
                 "EOF",
                 "curl -sL https://deb.nodesource.com/setup_10.x | sudo bash",
-                "sudo apt-get install nodejs"
+                "sudo apt-get install nodejs -y"
                 
             ]
         }
