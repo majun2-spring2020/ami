@@ -1,0 +1,16 @@
+# Cache objects
+packer_cache/
+
+# Crash log
+crash.log
+
+# For built boxes
+*.box
+# Cache objects
+packer_cache/
+
+# For built boxes
+*.box
+
+
+ami-vars-local.json
