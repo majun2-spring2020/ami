@@ -6,4 +6,5 @@ packer build \
     -var 'aws_region=us-east-1' \
     -var 'subnet_id=' \
     -var 'nonprod_account_id=813034945358'\
+    -var 'ssh_username=ubuntu'
     ubuntu-ami.json
