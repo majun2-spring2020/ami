@@ -40,7 +40,7 @@
             "inline": [
                 
                 "sudo apt-get update",
-                "sudo apt-get install mysql-server mysql-client php7.2 libapache2-mod-php apache2 curl -y",
+                "sudo apt-get install php7.2 libapache2-mod-php apache2 curl mysql-server mysql-client-y",
                 "sudo mysql << EOF",
                 "use mysql;create user 'majun'@'%' identified by 'qwer1234';flush privileges;GRANT ALL ON *.* TO 'majun'@'%';",
                 "EOF",

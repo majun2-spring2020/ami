@@ -8,3 +8,5 @@ packer build \
     -var 'nonprod_account_id=813034945358'\
     -var 'ssh_username=ubuntu'
     ubuntu-ami.json
+* second way
+packer build -var-file=./vars.json ubuntu-ami.json
