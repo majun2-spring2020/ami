@@ -4,5 +4,5 @@
     "aws_region" : "us-east-1",
     "subnet_id" : "" ,
     "nonprod_account_id":"813034945358",
-    "ssh_username":"ubuntu"
+    "ssh_username":"majun"
 }
