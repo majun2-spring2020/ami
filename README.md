@@ -9,4 +9,4 @@ packer build \
     -var 'ssh_username=ubuntu'
     ubuntu-ami.json
 * second way
-packer build -var-file=./vars.json ubuntu-ami.json
+packer build -var-file=./vars.json ubuntu-ami.json falj
