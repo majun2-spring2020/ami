@@ -6,7 +6,8 @@
         "subnet_id": "",
         "source_ami": "ami-07ebfd5b3428b6f4d",
         "ssh_username": "ubuntu",
-        "nonprod_account_id":""
+        "nonprod_account_id":"",
+        "bucket-name":""
     },
     "builders": [
         {
@@ -41,8 +42,11 @@
                 
                 "sudo apt-get update",
                 "curl -sL https://deb.nodesource.com/setup_10.x | sudo bash",
-                "sudo apt-get install build-essential nodejs -y"
-                
+                "sudo apt-get install build-essential nodejs ruby wget -y",
+                "cd /home/ec2-user",
+                "wget https://{{bucket-name}}.s3.{{aws_region}}.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto"
             ]
         }
     ]
