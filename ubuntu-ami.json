@@ -12,8 +12,8 @@
     "builders": [
         {
             "type": "amazon-ebs",
-            "access_key": "{{`AWS_ACCESS_KEY_ID`}}",
-            "secret_key": "{{`AWS_SECRET_ACCESS_KEY`}}",
+            "access_key": "{{user `AWS_ACCESS_KEY_ID`}}",
+            "secret_key": "{{user `AWS_SECRET_ACCESS_KEY`}}",
             "region": "{{user `aws_region`}}",
             "instance_type": "t2.micro",
             "subnet_id": "{{user `subnet_id`}}",
