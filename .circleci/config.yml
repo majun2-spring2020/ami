@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Build base
           command: 
-            packer build -var-file=./vars.json -var 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}' -var 'AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}' ubuntu-ami.json 
+            packer build -var-file=./vars.json ubuntu-ami.json 
           no_output_timeout: 30m
 workflows:
   version: 2
