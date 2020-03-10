@@ -11,3 +11,6 @@ packer build \
 * second way
 packer build -var-file=./vars.json ubuntu-ami.json
 # may fail try oncemore
+
+# trigger circleci
+* curl -u 078489e257cd76aa7a874c4bc9c24b2b45d912bd -d build_parameters[CIRCLE_JOB]=build-base https://circleci.com/api/v1.1/project/github/majun2-spring2020/ami
