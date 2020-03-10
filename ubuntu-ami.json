@@ -1,18 +1,19 @@
 {
     "variables": {
-        "aws_access_key": "",
-        "aws_secret_key": "",
+        "AWS_ACCESS_KEY_ID": "{{env `AWS_ACCESS_KEY_ID`}}",
+        "AWS_SECRET_ACCESS_KEY": "{{env `AWS_SECRET_ACCESS_KEY`}}",
         "aws_region": "",
         "subnet_id": "",
         "source_ami": "ami-07ebfd5b3428b6f4d",
         "ssh_username": "ubuntu",
-        "nonprod_account_id":""
+        "nonprod_account_id":"",
+        "bucket-name":""
     },
     "builders": [
         {
             "type": "amazon-ebs",
-            "access_key": "{{user `aws_access_key`}}",
-            "secret_key": "{{user `aws_secret_key`}}",
+            "access_key": "{{user `AWS_ACCESS_KEY_ID`}}",
+            "secret_key": "{{user `AWS_SECRET_ACCESS_KEY`}}",
             "region": "{{user `aws_region`}}",
             "instance_type": "t2.micro",
             "subnet_id": "{{user `subnet_id`}}",
@@ -41,8 +42,10 @@
                 
                 "sudo apt-get update",
                 "curl -sL https://deb.nodesource.com/setup_10.x | sudo bash",
-                "sudo apt-get install build-essential nodejs -y"
-                
+                "sudo apt-get install build-essential nodejs ruby wget -y",
+                "wget https://aws-codedeploy-{{user `aws_region`}}.s3.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto"
             ]
         }
     ]

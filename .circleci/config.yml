@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Build base
           command: 
-            packer build -var-file=./vars.json ubuntu-ami.json
+            packer build -var-file=./vars.json ubuntu-ami.json 
           no_output_timeout: 30m
 workflows:
   version: 2

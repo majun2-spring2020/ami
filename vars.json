@@ -1,8 +1,7 @@
 {
-    "aws_access_key" :"AKIAXOQ3XLO2PM37SFMZ" ,
-    "aws_secret_key" :"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",
     "aws_region" : "us-east-1",
     "subnet_id" : "" ,
     "nonprod_account_id":"813034945358",
-    "ssh_username":"ubuntu"
+    "ssh_username":"ubuntu",
+    "bucket-name":"codedeploy"
 }
